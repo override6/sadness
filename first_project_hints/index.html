@@ -1,0 +1,396 @@
+<!DOCTYPE html> <!-- первая строчка необходима для того, чтобы оюозначить, что данный формат кода является хтмл-->
+<!--элементом является вся комбинация открывающихся скобок, закрывающихся и текста между ними, по отдельности это все части элемента -->
+<html> <!--чтобы быстро создать готовую базу кода нужно набрать: ! TAb-->
+<head>
+    <title>Trying smth?</title> <!-- название сайта, написано на вкалдке в браузере-->
+    <meta charset="UTF-8"> <!--желательно всегда задавать позицию UTF-8-->
+    <meta name="description" content="First time rose leaf falling"> <!--команда meta является информацией об информации, краткое описание нашего сайта, может быть использована только в разделе head-->
+    <meta name="keywords" content="trying smth, black, things">
+    <meta name="author" content="Override">
+    <meta name="viewport" content="width=device-width"> <!--эта команда позволяет приспособить страницу браузера для обзора на мобильных устройствах--><!--if someone is watching our website from mobile we can use this element: @media screen and (max-width:600px){ aside,section,article{width:100%}}-->
+    <meta http-equiv="refresh" content="900"> <!--эта команада позоволяет задать количество секунд после которого браузер обновится-->
+    <!--description позовляет вставить описание для странциы браузера; keywords позволяет бразуру найти страницу по ключевым словам; author позовляет найти страницу по имени автора-->
+    <link rel="icon" type="image/gif" href="/images/1668857765_188648.gif"><!--с помощью этой команды можно создать иконку вебсайта-->
+<!--When we overbiew our website, we can say that it has some parts, that are called semantic tags: header, nav, main, section, aside, article, footer. Main contains of section, aside, articles-->
+<!--Section is just normal info. Aside can be used for some quotes, comments, links. Article is quite similar to section but its more independant content, like for job posts, news articles.-->
+<!--Dealing with css it is worth mentionung, that there are 3 ways of using it: Inline, Internal, External. Inline is used on a certain element like "p" or "div". Internal is used in the "head" of a script and inflicts on certain parts of a document. External style sheet is a reusable one, to apply it you need to create one more document with css styling-->
+  <!--Internal--> <style>
+        body{
+            background-color: rgb(36, 33, 33); color: rgb(255, 255, 255);
+        }
+   </style> <!--besides "body" element there can be used any other elements like "h1", "p" and many others. If you want to select all elemnts set on "*". Using style element in head tag and any of this elements with "{}" will inflict certain style properties for this elemnts in whole script-->
+   <!--you can set a background image with element " background-image" but if your image is small, it will repeat itself multiple times, to fix that use "background-repeat: no-repeat"; to position it in a center use: "background-position: center"; if you want it to stay in the viewport all the time use "background-attachment: fixed"; but it will still just be in a center, if you want it to cover all space use "background-size: cover"-->
+   <!--External--> <link rel="stylesheet" href="style.css"> 
+   <!-- if you need to apply stile for a certain element you can use "id" -->
+    <!--each element can alsoo be called selector for later uses-->
+    <!--pseudo-elements are keywords added after a selector "::" used to style a specific part of an element: "selector::pseudo-element"; like a line "::first-line", a letter "::first-letter", what is selected with our mouse "::selection"-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   <!--If you go in chrome and inspect an element you can find out that there are some layers around th element, and the last layer is margin, you can see margin if you look on the left side of text on a web-page, it is just a little of space and you can change it by using elemnt "margin:(0 or F-1 or T)". Elmenet->padding->border->margin-->
+   <!--but the whole thing changes when we apply margin to a certain element, like box, read lower next to shadows about it-->
+   <script src="https://kit.fontawesome.com/2d771ce0aa.js" crossorigin="anonymous"></script>
+   <!--100 - Thin (Hairline)
+    200 - Extra Light (Ultra Light)
+    300 - Light
+    400 - Regular (Normal)
+    500 - Medium
+    600 - Semi Bold (Demi Bold)
+    700 - Bold
+    800 - Extra Bold (Ultra Bold)
+    900 - Black (Heavy)-->
+</head>
+<body>
+    <header> <!--команда header необходима для вставки вводной информации и ссылок-->
+        <div class="icons"><i class="fa-brands fa-codepen fa-5x"></i></div><!--ypu can add icons to your web-page, first you need to put a link from that site, then add not-pro icon-->
+        <h1>Welcome to the End of Time</h1>
+        <nav class="navbar"> <!--for navbar you need un unordered list, than remove bullets, modify ul, then modify all anchors, then if you forgor check css part, for the text to be in a line use "float" property "left"-->
+            <ul>
+                <li><a class="odd" href="">A place called home?</a></li> <!--you can also apply css properties by a "class". In oreder to apply it on a webpage you will need to use ".class" in a css part-->
+                <li><a class="even" href="">People called friends?</a></li>
+                <li><a class="odd" href="">A familiar face?</a></li>
+                <li><a class="even" href="">A warm word?</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main> <!--команда main непонятно зачем нужна, но думаю ей можно оставить немного места. It can be used when we want to put in the start of our document a navigation bar and we need to apply different margin-->
+    <!--Inline--><h1 id="h11" align="center" style="background-color: beige; color: deeppink;">Testing smth</h1> <!--с помощью команды style  можно менять стиль, как всего сайта, если вписать в элемент body, так и отдельных его частей-->
+        <hr> <!-- hr, br, img  не требуют после себя закрытия; h(1-6), head, body, title, a, html треуют закрытия-->
+        <!--чтобы использовать две команды по изменению цвета одновременно, это надо делать в одном поле style через двоеточие or through css stylesheet-->
+        <h2 id="h21" class="hA">Testing smth</h2> <!--in order to apply a stylesheet you need to put a # before an id of an element, than you can write  a css style element/ SOme elements although affecting style are not css propertien, for example "align". If you write it in css document it will show up as an error, so if you need to aligh, yopu need to use it in html part-->
+        <h3 id="h31" class="hA">Testing smth</h3> <!--также можно выбирать цвет на палитре ргб, палитра ргб сама открывается в коде, надо навестись-->
+        <h4 id="h41" class="hA">Testing smth</h4>
+        <h5 id="h51" class="hA">Testing smth</h5> <!-- можно просто взять hex цвет и сразу вставить его в поле после команды color-->
+        <h6 id="h61" class="hA">Testing smth</h6> <!-- h? ? это цифра, эта строка влияет на разиер шрифта от 1 до 6-->
+        <hr>
+    </main>
+    <form action="index.php" method="post" enctype="multipart/form-data"> <!--в разделе method есть две команды get/post, первую лучше не использовать для паролей(подходит лучше для поиска чего-то на веб-странице), можно слить информацию, вторая работает только если есть сервер-->
+        <!--команда enctype необходимо для отправки файлов на сервер, чаще всего используется multipart/form-data, он позволяет разбивать отправляемый файл на части и отправлять, его а когда он приходит, он вновь собирается-->
+        <div>
+            <label for="fname">first name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Override?" required> <!--команды type, id, name, лучше просто вписать, могут пригодиться позже, а команда for поможет людям используюйщим скринридер-->
+        </div>
+        <br>
+        <div>
+            <label for="lname">last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="ifelsethen?" required> <!--команда required является атрибутом, если не заполнить те же поля, вылезет сообщение-->
+        </div>
+        <br>
+        <div>
+            <label for="pass">password:</label>
+            <input type="password" id="pass" name="pass" placeholder="Jbhd8678-" maxlength="9" required> <!--можно добавить в любом разделе type команды minlength/maxlength которые закрепят минимальное/максимальное количество символов-->
+        </div>
+        <br>
+        <div>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" placeholder="crazy@mail.com" required autocomplete="email">
+        </div>
+        <br>
+        <div>
+            <label for="phone">phone number #:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000)-234-5678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required autocomplete="mobile"> <!--в разделе телефона необходимо также указывать данный паттерн, чтобы люди не писали ерунду-->
+        </div>
+        <br>
+        <div>
+            <label for="bdate">birth date:</label>
+            <input type="date" id="bdate" name="bdate" required>
+        </div>
+        <br>
+        <div>
+            <label for="quantity">quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="20" value="1">
+        </div>
+        <br>
+        <div>
+            <label for="Кто вы?">Кто вы?:</label>
+            <label for="молоко">молоко</label>
+            <input type="radio" id="молоко" name="Кто вы?" value="молоко">
+            <label for="звезда">звезда</label>
+            <input type="radio" id="звезда" name="Кто вы?" value="звезда">
+            <label for="кто-то">кто-то</label>
+            <input type="radio" id="кто-то" name="Кто вы?" value="кто-то"> <!--команды for, id, value прописываются чтобы делая выбор можно было нажимать не только на кружочки, но и на слова-->
+        </div> <!--команда radio позовляет создать кружочки для выбора варианта, но изначально на них всех можно будет нажать и выбрать все, чтобы сделать выбор уникальным нужно задать им одно имя-->
+        <br>
+        <div>
+            <label for="payment">payment:</label>
+            <select id="payment" name="payment">
+                <option value="карточка">карточка</option>
+                <option value="оргнаы">оргнаы</option>
+                <option value="душа">душа</option>
+            </select><!--команда select, option может быть использована не только для оплаты но и для просто выбора варианат-->
+        </div>
+        <br>
+        <div>
+            <label for="знаком">Я ознаокмился с угрозой для своей жизни при использовании сайта и готов продолжить:</label>
+            <input type="checkbox" id="знаком" name="знаком" value="знаком" required> 
+        </div>
+        <br>
+        <div>
+            <label for="comment">comment:</label>
+            <textarea id="comment" rows="10" cols="30" placeholder="bla-bla-bla-bla"></textarea> <!--чтобы создать комментарий не нужна команда input, нужно использовать элемент textarea-->
+        </div>
+        <br>
+        <div>
+            <label for="file">file:</label>
+            <input type="file" id="file"> <!--изначально принимаются все файлы, если нам нужен какой-то конкретный, то нужно указать команду accept-->
+        </div>
+        <div>
+            <input type="reset">
+        </div>
+        <br>
+        <div>
+            <input type="submit">
+        </div>
+        <!--команды reset/submit самостоятельные и выполняют свои функции, важны команды записаные под элементом type, именно они и будут задавать функцию форме-->
+    </form>
+        <hr>
+        <br>
+        <!--you can use variable "opacity" 0=ivisible, 1=visible-->
+        <!--"transform" property allow you to rotate, scale, skew or translate(move) an element; you can put this properties in one line after "transfrom:""-->
+        <!--you can use "translateX" to move the element on (X)axis, "translateY" to move it on (Y)axis, or just "translate (0,0)" to move on both axis-->
+        <!--you can rotate (here we use deg every time) an element by using "rotateX" to rotate it around (X)axis, "rotateY" to rotate it around (Y)axis, "rotateZ" to rotate it just around-->
+        <!--you can also change the scale of an element on certain axis by using "scaleX" to scale its botttom and upper parts, "scaleY" to scale its left and right sides, "scale(0,0)" to scale all sides-->
+        <!--you can skew(наклонить)(also use deg) an element by using "skewX", "skewY", "skew(0,0)"-->
+        <div class="box" id="box1"></div> <!--now we can deal with each elment's margin individually, we can use such elements as "margin-top,left,bottom, right: *px (auto-this way margin will take up all the space)"-->
+        <div class="box" id="box2"></div><!--If you need an element to stay in the middle of your page, you can use just "margin: auto"-->
+        <div id="shd2" class="shdBOX"></div> <!--also you can do shadows for boxes with element "box-shadow"-->
+        <p align="center" id="shd1" class="autoShow">Crazy?</p> <!--p это парагаф, ставит автоматически пустую строку сверху-->
+        <!--when we deal with shadows we use element "text-shadow" and such atributes as the first number is horizontal movement, the second is vertical movement, the third is transparency (for this one the best are 1-5) and there are no comas between these/ If we want to add another shadow, we place comas and write the atributes again, if we want the shadow to go the other way, we can place minus before an atribute "-3px" -->
+        <!--you can also create animations using css, first you will need to create an element in css part "@keyframes" and give it a name-->
+        <!--in the animating element's part there special properties: "animation-name"(binds this element to @keyframes), "animation-duration"(sets time for animation to complete), "animation-iteration-count"(sets the amount of times an animation will occur, can be a number or "infinite"), "animation-direction"(sets the direction of animation, by deafault its "normal", can be set to "reverse", "alternate", "alternate-reverse";)-->
+        <!--"animation-play-state"(can be used to apuse "paused" or run it "running", it has more uses with JS), "animation-timing-function"(deals with speed and movement, by default it is "ease-in-out"(speeds up then slows down), "linear"(constant speed),"steps()"(stop motion effect with certain amount of set steps), you also can inspect an element, change the value of function there and copy it back)-->
+        <!--returning back to "@keyframes" we can choose how we want to animate an element, first there are three possible values(to(sets the direction to move to), from(sets the direction from where it is moving), X%(percent sets the amount of animation that will be completed before it revertes, if we put 100% its by default, the animation will play and then blink back, so we can put 50% for it to complete in half of set time and in left time smoothly come back to the start))-->
+        <!--after values in {} we can choose animation type, first we can use all transform properties(translate, scale, skew, rotate), "opacity"(allow our element to fade in and out), "color" or "background-color"(we can set like 5 of them with different percenatges, so it will look like a rainbow), "box-shadow"(here the main are blur radius and color, and we can make a glow effect)-->
+        <!--you can start an animation by using pseudo class, just take all the animation related elements and put them in this class-->
+        <br>
+        <div id="brd1" class="autoShow"> <!--you can place a border around certain elements with "border-style:" you can apply types of borders:solid, dashed, dotted, double, groove, ridge, inset, outset, or none, if something already had a border. To change width of a border, use border-width (by default its 1px), change color with border-color and curl with border-radius-->
+            <!--or you can write all the elements in just one line, except border-radius-->
+            <!--команда pre позовляет отформатировать текст в скрипте и потом сгрузить его в браузер, лучше через css-->
+            <br> <!-- самостоятельно ставим пустую строку; lorem--странный текст на латыни-->
+            <!--if you need to align an element, you can use elment "text-align" there is even justify option-->
+            <p id="p1" class="pA autoShow"><span id="brd2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p> <!--there are different font families: Sans-serif: Serif; Serif(red serifs). The first one is the best-->
+            <p id="p2" class="pA autoShow"><span id="brd3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p><!--in order to apply font for an elemet you need to use "font-family", it is better to write a couple of fonts in this element, in case web-browser can't use some of them. If font has two or more words in its name, you need to put it in "" -->
+            <p id="p3" class="pA autoShow"><span id="brd4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p><!--to change font size, you need to use element "font-size", to measure it you have to variables: "px" "em". Common px value is 16, 1 em is like 100%, so 2 em=200%-->
+            <p id="p4" class="pA autoShow"><span id="brd5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p> <!--to change its weight or style you can use elements lise "font-weight","font-style". From the start they are just "normal", but you can set them on "bold" and "italic"-->
+            <p id="p5" class="pA autoShow"><span id="brd6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p> <!--you can also used specialized fonts from google, in order to do that, go on https://fonts.google.com/ choose one and download it, then paste it in the "head", find a name of it ina link and use in css part-->
+            <p id="p6" class="pA autoShow"><span id="brd7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum labore tenetur, 
+                similique maxime doloribus culpa minima aliquam saepe eaque, omnis quasi ullam nemo officia, voluptas repudiandae? Quisquam, hic architecto?</span></p>     
+            <p id="p7"><span id="brd8">I was crazy once</span></p> <!--We can download these google fonts for later uses, for that we need a new folder, then download a font, unzip a file, find .ttf document and put it in that folder, after that we use "@font-face" src: url, and name it with font-family-->
+        </div > <!--you can also apply border for only one side of an element: top, bottom, right, left with element "border-top,bottom,...."-->
+        <!-- команда a href нужна чтобы создать гиперссылку; "а" расшифровывается как anchor, "href"-hypertext reference-->
+        <div align="center" id="url1" class="autoShow">
+            <a href="https://www.youtube.com/" target="_blank" title="Videos"> <!--title это то что будет высвечиваться в коробочке когда наводим на ссылку-->
+                ||YOUTUBE#1//
+            </a>
+            <a href="https://www.youtube.com/" target="_self">    <!-- blank это на другую вкладку; self это на той же вкладке-->
+                YOUTUBE#2//
+            </a>
+            <a href="another_file.html" target="_blank">
+                ANOTHER FILE//
+            </a>
+            <a href="mailto:nikea2323@gmail.com" target="_blank">
+                EMAIL ME||
+            </a>
+        </div>
+        <img src="/images/skeleton.webp" alt="goofy ahhh" title="skltn" class="autoRotate" id="ad1"> <!--we can change a position of an elemnt with elment "position", there are some properties for it (each can be modified with: top, left, bottom, right): -->
+        <!--static(just the most normal position of an element), relative(its relative to where it should be), absolute(binded to its previous anscestor, for example box in a box, can override text below), fixed(fixed to user's viewport, good for ads), sticky(first acts like relative staying in one place, but when we scroll down, it scrolls with us)-->
+        <img src="/images/icegif-7.gif" alt="yappi" title="dude" id="ad2">
+        <section id="flow1" class="autoShow">
+            <a href="https://evangelion.fandom.com/ru/wiki/Каору_Нагиса" target="_blank" id="img1"> <!--"float" property allows text or another image to float around another object even if it s a "div" element-->
+            <!--чтобы вставить фото, необходимо загрузить его в папку с кодами, но если в сайте много фоток, то проще создать папку и проложить путь к данным фотографиям. Это делается путем добавления названия папки /..../ перед названием фото-->
+            <img align="right" src="/images/angel.png" height="400" width="350" alt="this is kaworu" title="angel in the night" class="autoShow"><!--высота и ширина фото измеряется в пикселях; изначаль они пропорциональны друг другу, изменяя одно, изменятеся и второе, но можно настраивать самому-->
+            <!--если кто-то использует screen reader то можно написать команду alt которуй прочитает screen reader-->
+            </a>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <img src="/images/Register - Login.gif" width="350" align="right" id="gif1" class="autoShow"> <!--if you make a container from a body, or div, or box of your web-page, some flowing elemnts might get out of its border, to stop that use element "display:flow-root"-->
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <video controls src="/mp4/IMG_1536.MP4" width="700" id="vid1" class="autoShow">
+                <!-- <source src="/mp4/IMG_1536.WebM">
+                <source src="/mp4/IMG_1536.MP4"> В бразуер всегда закидываем по этой схеме несколькими вариантами, потому что какой-то из них может не поддерживаться-->
+            </video> 
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <p class="autoShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusantium veritatis laboriosam reiciendis aliquid dolorum laborum voluptatibus velit eum placeat reprehenderit dicta alias totam, exercitationem, iure vitae at est quae sed.</p>
+            <audio controls id="aud1" class="autoShow"> <!-- команда controls; autoplay; muted; loop работает как T/F если ее нет, то это false, если есть, то это true. Такие команды называются boolean attribute-->
+                <source src="/mp3/Jack Stauber's Micropop - Fighter.mp3" type="audio/mpeg">
+                <source src="/mp3/Jack Stauber's Micropop - Fighter.wav" type="audio/wav">
+                <!-- Если бразуер не поддерживает какой-то из форматов файлов, используем эти команды-->
+            </audio>  
+        </section>
+        <br>
+        <br>
+        <!--by default "width" and "height" are set on auto, if you set one on auto, and change another it will look nice, when you try to put them next to each other you can make both of them 50% wide, but you should also count borders and margin; (but if you add "box-sizing:border-box" you don't need to count that)<-not sure about this-->
+        <!--you can also apply max- and min-height, min-height will automatically take up all setted space, max-height will do that only if there is enoughh content in that box-->
+        <!--if you use "vh" and not "px", vh means viewport height and it will spread to the end of a page-->
+        <div id="container" class="autoShow">
+            <div id="ofl1" class="disp autoShow"> <!--"overflow" element is used when there is too much text for certain box, there are some properties such as: visible(does nothing, its like neutral); hidden(hides text that goes out of a border); clip (is used with "overfow-clip-margin", sets certain amount of text that can clip through the box); scroll (adds a scroll bar to show other text, the best one); auto (checks if scroll bar is needed)-->
+                    <p>They locked me in a room, <b>a rubber room</b></p> <!-- команда b позволяет менять текст на жирный, но она работает только в элементах параграфа "p". Когда мф добавляем значение размера шрифта, всеь текст автоматически становится жирным-->
+                    <p>They locked <i>me in a room,</i> a rubber room</p> <!-- команда i меняет текст на курсив-->
+                    <p><big>They</big> locked <small>me</small> in a room, a rubber room</p> <!-- команды big/small меняют размер текста, но вдимо на одну величину-->
+                    <p>They locked me in <sub>a room,</sub>  <sup>a rubber room</sup></p> <!--команды sub/sup ответсвенны за подстрочный и надстрочный формат-->
+                    <p>They locked <u>me in a room,</u> <del>a rubber room</del></p> <!--команда u позволяет подчеркнуть текст, а del - зачеркунть-->
+                    <p><mark style="background-color: #fa3e05;">They locked me in a room, a rubber room</mark> </p> <!-- команда mark позволяет выделить текст-->
+                    <p><tt>They locked me in a room, a rubber room</tt> </p> <!--команда tt позволяет придать тексту стиль monoscript-->
+            </div> 
+        <!--you can flex boxed elements in certain shapes like rows and columns with element "display:flex"--> <!--by default property "flex-drection:" is "row", if we want to reverse their placement we can use "row-reverse", if we want to set them in a colomn we can set it to "column" or "column-reverse";-->
+        <!--also we can change the alignment of our content with property "justify-content", it will cahnge it position by (x) axis, by default it is set to "flex-start"(justifies to the left side), we can change it to "flex-end"(justifies to the right side), "center"(justifies to the center), if we want to have equal spaces between these blocks on a page we can use "space-between", to count also space around the elements we can use "space-around", if we want to space them out even to each other and borders we can use "space-evenly"--> 
+        <!--if we need to align elemnets by (Y) axis we can use property "align-items", by default its "flex-start"(the elements will still be in the upper row of our container), "flex-end" (sets this row on the bottom of our container), "center" (puts them in the middel of (Y)axis), with "baseline" it prioritieses the alignment of text in the boxes-->
+        <!--if there are a lot of elements in a container and they are being compressed you can use elment "flex-wrap:", by default it is set to "nowrap", if we set it to "wrap" some elements will go to the other row but only if there is not enough room, also we can set them to "wrap-reverse"(the y will be transported to the bottom of our container and will wrap upwards if needed) -->
+        <!--"flex-wrap" is often used with "align-content:", if we set the second one to "flex-start" all space between rows will be gone, if we use "flex-end" its the same thing but rows are in the bottom, "center" the same but the rows are in the center of the container, "space-evenly" the row stays in the center of the container and if it wraps there are even spaces between up bottom borders and rows, "space-between" (if rows wrap they are set to the upper and bottom row of the container, if it doesn't wrap then its all just in the upper row)-->
+        <!--you can add gaps between rows and columns with "column-gap:" and "row-gap"-->
+        <!--you can also apply this changes to each element individually with property "align-self:", "start" puts it in the top right corner, "center" puts it ina center of a container, "end" puts it in left bottom corner; with property "order:" you can change the order of this elements in a row, "1" puts it in the end of a row, "-1" puts it in the beginning-->
+            <div id="disp1" class="disp autoShow"> <!--"display" element is used two change how different elements behave, for example div,h1,p,form,header,footer take up the whole line and span,a,img take up only needed space; with display you can change their behaviour: block(like div), inline(like span), inline-block(can apply width and height, but behaves like span), none(erases the element, it doean't take any space)-->
+                <!--if you use element "visibility" with prpoerty 'hidden' then the elment will still take up space but it won't be visible-->
+                <h2>Ненумированный список</h2> <!-- для ненумированного и нумерованного списков мы используем команды ul (unorderd list)/ol (ordered list) для начала списка и его конца, а внутри этого элемента для каждого буллета или номера команда li-->
+                <!--you can modify your lists by using pseudo-elements: before, after, marker, you can remove a mrker by using "list-style-type:none"-->
+                    <ul id="unli">
+                        <li id="milk"> молоко</li>
+                        <li id="smth"> что-нибудь</li>
+                        <li id="stars"> звезды</li>
+                            <ul> <!-- чтобы создать новый уровень списка, просто создаем еще один спсиок внутри этого списка-->                               
+                                <li id="wht">белые</li>
+                                <li id="yel">желтые</li>
+                                <li id="nic">приятные</li>
+                            </ul>
+                    </ul>
+            </div>
+            <div id="disp2" class="disp autoShow">
+                <h2>Нумированный список</h2>
+                    <ol type="I" id="olli"> <!-- с пмощью команды type  можно задать тип нумерации-->
+                        <li id="thing">вещь</li>
+                        <li id="watcher">смотритель</li>
+                        <li id="Nsmth">недоразумение</li>
+                    </ol>
+            </div>
+            <div id="disp3" class="disp autoShow">
+                <h2>Список с объяснениями</h2> <!-- для начала этого списка используется команда dl (description list), а элементы этого списка создаются при помощи команд dt(description term) и dd(description definition)-->
+                    <dl id="dlli">
+                        <dt id="milk">молоко</dt>
+                        <dd>оно вредно для здоровья</dd>
+                        <dt id="stars">звезды</dt>
+                        <dd>они созданы чтобы на них смотреть</dd>
+                        <dt id="wtr">вода</dt>
+                        <dd>она существует везде</dd>
+                    </dl>
+            </div>
+            <div id="disp4" class="disp autoShow">
+                <h1>Таблица</h1> <!--таблица создается командой table, ряд в таблице: tr (table row); заголовок по умолчанию жирный шрифт создается с помощью: th (table head); объяснения в таблице создаются в обычном шрифте с помщью команды: td (table data)-->
+                <table border="1" bgcolor="grey" style="color: black;"> <!--изменять цвет можно при помощи команды bgcolor, если пишем в строке table, то меняется цвет границ таблицы, если пишем в разделе tr, то меняется цвет клеток -->
+                    <tr bgcolor="red" align="center"> <!-- чтобы изменить положение текста нужно использовать команду align (left;right;center)-->
+                        <th width="100">Белый</th> <!--чтобы изменить ширину ячеек используем команду width.-->
+                        <th width="100">Черный</th>
+                        <th width="100">Розовый</th>
+                    </tr>
+                    <tr bgcolor="pink" align="center">
+                        <td>свет</td>
+                        <td>тьма</td>
+                        <td>цветы</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="disp5" class="disp autoShow">
+                <iframe src="another_file.html"></iframe>
+                <!--команда iframe позволяет создать внутри нашего сайта другой сайт, можно копировать уже существующий URL или вставить свой собственный. Можно использовать для рекламы, но многие сайты заблокировали эту возможность поскольку увеличилось количество взломов аккаунтов, создавая поддельные страницы настоящих сайтов-->
+                <!--<iframe src="https://ww3.readjujutsukaisen.com/" width="600" height="600"> Странно дает обновлять сайт, поэтому пока здесь полежит-->
+            </div>
+            <br>
+            <br>
+            <div id="comb" class="autoShow"> <!--команда div позволяет объединить несколько элементов в один и также придать им общее значение, короче упрощает. В отличие от span выделяет не просто слова, а целую строчку-->
+            <!--there are special combinations in css: descendant(is activated by " " between elemnts in css part, inflicts on ALL selected elemnts inside that element "p1,p2,p3"), child (is activated by ">" between elements, inflicts on particular elements in that div or other element, if there is another "p" in another "div2" inside our "div1", that "p" won't be inflicted "p1,p2"-->
+            <!--general sibling (is activated by "~" between elements, they are now just siblings and only "p4,p5" will be inflicted in relation to "div1" being main), adjacent sibling (is activated by "+" between elements, only the closest element will be effected "p4")-->
+                            <!--<div1>
+                                <p1>hi</p>
+                                <p2>hi</p>
+                                    <div2>
+                                        <p3>hi</p>
+                                    </div2>
+                                </div1>
+                                <p4>hi</p>
+                                <p5>hi</p>-->
+                <p>Lorem ipsum dolor sit amet, <span style="color: bisque;">consectetur adipisicing elit.</span> <!-- команда span позволяет выделить кусок текста из общей массы и придать ему конкретное значение-->
+                Eligendi veritatis delectus aspernatur iure autem beatae, ipsam assumenda voluptatum ratione, laudantium necessitatibus illum, culpa incidunt suscipit sit?</p>
+                <p>Lorem ipsum dolor sit amet, <span style="color: bisque;">consectetur adipisicing elit.</span>
+                Eligendi veritatis delectus aspernatur iure autem beatae, ipsam assumenda voluptatum ratione, laudantium necessitatibus illum, culpa incidunt suscipit sit?</p>
+                <p>Lorem ipsum dolor sit amet, <span style="color: bisque;">consectetur adipisicing elit.</span>
+                Eligendi veritatis delectus aspernatur iure autem beatae, ipsam assumenda voluptatum ratione, laudantium necessitatibus illum, culpa incidunt suscipit sit?</p>
+            </div>
+            <div class="gallery autoShow"> <!--to create a gallery put some images, place an anchor on each of them, then put overall width X-px and for each image 100%-->
+                <a target="_blank" href="/images/help.jpg"><img src="/images/help.jpg"></a>
+                <div class="description">Helping hand</div>
+            </div>
+            <div class="gallery autoShow">
+                <a target="_blank" href="/images/knife.jpg"><img src="/images/knife.jpg"></a>
+                <div class="description">Knife?!</div>
+            </div>
+            <div class="gallery autoShow">
+                <a target="_blank" href="/images/gojo.jpg"><img src="/images/gojo.jpg"></a>
+                <div class="description">Familiar face</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown autoShow"> <!--to create a dropdwon menu you need a button and then several elemnt's combinations like ".dropdown a" ".dropdown .content" ".dropdown:hover .content" ".dropdown a:hover"-->
+            <button  id="but1">Click?</button> <!--можно добавить атрибут disabled: кнопка останется но не будет кликабельной-->
+            <div class="content">
+                <a href="https://yummyanime.tv/91-rezero-a32-y3.html" target="_blank">Anime</a> <!--in css you can add pseudo properties to any elements by ":active(when you press it), hover(when you hover over it), visited". Also there is "not" pseudo class: anything that is "not:(hover)", "not:(active)"-->
+                <!--also there is ":nth-child()" pseudo element, if you have a lot of elements, like in a list, you can write in the brackets the number of an element; "odd" or "even"; for every third, forth or other "*n", if we want to start that count from 1 or 2 "*n+1 or +2 or +other"-->
+                <!--чтобы изменить размер кнопки нужно использовать команду font-size-->
+                <a href="https://ww3.readjujutsukaisen.com/" target="_blank">Manga</a>
+                <a href="https://character.ai/chat/4WOVrCApi4JYwfYwU2e5eDeFalLOkGBw6IfUZPX1XVQ" target="_blank">Chatting</a>
+            </div>
+        </div>
+        <br>
+        <br> 
+        <button onclick="doSomething()" style="background-color: darkred; color: darkorange; font-size: 50px" class="">Well, now you need to click this</button>
+        <p id="words">Who are you?</p>
+        <!--также можно создать не просто кнопку ссылку, а задать ей каую-то функцию (для этого необходимо вписать в элемент button команду onclick), но для этого нужен Java script-->
+        <script>
+            function doSomething(){
+                document.getElementById("words").innerHTML = "Ah, I see now";
+            }
+        </script>
+        <div class="pagination"> <!--you can set pages in your web-page, for that you will need a couple hyperlinks, than set one link as active class, modify it in css ".pagination a.active" you can also modify other links ".pagination a:hover:not(.active)"-->
+        <!--hyperlinks have underlining, if you want to remove it you can use "text-decoration" element, if you want to change how cursor looks when pointing at certain element apply "cursor:"-->
+            <a href="index.html"><</a>
+            <a href="index.html" class="active">1</a>
+            <a href="another_file.html">2</a>
+            <a href="/first_project_hints/3rd_child.html">3</a>
+            <a href="/first_project_hints/4th_child.html">4</a>
+            <a href="another_file.html">></a>
+        </div>
+    <footer style="background-color: crimson;"> <!--команда footer нужна, чтобы оставить напоследок автора эмаил и авторские права-->
+        <hr>
+        author: Override <br>
+        &copy; copyright resrved <br>
+        <small><a href="mailto: override@mail.com">override@mail.com</a></small>
+    </footer>
+    <script src="/first_project_hints/index.js"></script>
+</body>
+</html>

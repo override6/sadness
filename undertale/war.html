@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="/images/moon-icon.jpg">
+    <title>The Gateway</title>
+    <link rel="stylesheet" href="/undertale/war.css">
+    <script src="/undertale/war.js" defer></script>
+    <script src="/undertale/rain.js" defer></script>
+    <script src="/undertale/dialog.js" defer></script>
+</head>
+<body>
+  <button id="fullscreen-button">Перейти в полноэкранный режим</button>
+    <section class="layers">
+        <div class="layers__container">
+            <div class="layers__item layer-1" style="background-image: url(/undertale/3d_effect/sky.jpg);"></div>
+            <div class="layers__item layer-2" style="background-image: url(/undertale/3d_effect/moon.png);"></div>
+            <div class="layers__item layer-3">
+                <div class="Bwords">
+                   <button class="open-main" id="unmute-button">Всмотреться в луну</button>
+                </div>
+            </div>
+            <div class="layers__item layer-4">
+                <canvas class="rain"></canvas>
+            </div>
+            <div class="layers__item layer-5" style="background-image: url(/undertale/3d_effect/clouds.png);"></div>
+            <div class="layers__item layer-6" style="background-image: url(/undertale/3d_effect/raindrop.png);"></div>
+        </div>
+    </section>
+    <!-- Диалоговое окно -->
+<div id="dialog-box" class="hidden">
+  <div id="text-container"></div>
+</div>
+  <!-- Место для изображения креста -->
+  <div id="cross-image" class="hidden">
+    <a href="https://example.com"  target="_self">
+      <img src="/undertale/3d_effect/save.png" alt="Крест" width="100" height="100">
+    </a>
+  </div>
+
+<!-- Аудио для звука печатания -->
+<audio id="typing-sound" src="/undertale/sounds/typing-sound.mp3"></audio>
+<!-- Фоновая музыка -->
+<audio id="background-music" src="/undertale/sounds/raining.mp3" autoplay loop muted></audio>
+</body>
+</html>
